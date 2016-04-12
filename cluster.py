@@ -33,5 +33,5 @@ if __name__ == '__main__':
   stemmer = nltk.stem.snowball.SnowballStemmer('english')
 
   synopses = movies_dict['synopses']
-  totalvocab_tokenized = itertools.chain(*(tokenize_only(syn) for syn in synopses))
-  totalvocab_stemmed = itertools.chain(*(tokenize_and_stem(syn) for syn in synopses))
+  totalvocab_tokenized = list(itertools.chain(*(tokenize_only(syn) for syn in synopses)))
+  totalvocab_stemmed = list(itertools.chain(*(tokenize_and_stem(syn) for syn in synopses)))
