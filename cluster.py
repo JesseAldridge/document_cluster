@@ -35,3 +35,5 @@ if __name__ == '__main__':
   synopses = movies_dict['synopses']
   totalvocab_tokenized = list(itertools.chain(*(tokenize_only(syn) for syn in synopses)))
   totalvocab_stemmed = list(itertools.chain(*(tokenize_and_stem(syn) for syn in synopses)))
+  print 'totalvocab_tokenized:', totalvocab_tokenized[:10]
+  print 'totalvocab_stemmed:', totalvocab_stemmed[:10]
